@@ -49,21 +49,36 @@ flowchart TB
     class TEST,RESULT validation
 ```
 
-### Security Validation Focus
+## Security Validation Focus
 
-The lab demonstrates how threat modeling can inform practical security validation.
+This laboratory demonstrates how STRIDE threat modeling informs practical security testing using a FastAPI-based insurance Claims API.
 
-**Implemented validation focus:**
-- Object-level authorization testing.
-- Testing access to claims belonging to another user.
-- Evaluating whether unauthorized requests are rejected.
+### Current Implementation
 
+- A fictional Claims API containing records belonging to different users.
+- An API endpoint that retrieves claims using a claim identifier.
+- A user parameter that allows cross-user access scenarios to be tested.
+- Automated API tests.
+
+### Identified Security Risk
+
+**Broken Object Level Authorization (BOLA)**
+
+The current API does not enforce ownership checks when retrieving claims.
+
+Consequently, a user may access another user's claim by providing its identifier.
+
+Example:
+
+```http
+GET /claims/1002?user=Alice
 **Additional STRIDE control areas:**
 - Authentication and identity verification.
 - Input validation and data integrity.
 - Audit logging and accountability.
 - Availability and resilience.
 - Privilege enforcement.
+```
 
 These additional areas represent security considerations and potential extensions; their inclusion in the threat model does not imply that all controls have been implemented or tested.
 
