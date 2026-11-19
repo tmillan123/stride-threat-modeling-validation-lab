@@ -36,3 +36,11 @@ def test_bola_vulnerability_reproduced():
 
     assert response.status_code == 200
     assert response.json()["customer"] == "Bob"
+def test_cross_customer_access_must_be_denied():
+    """
+    Security requirement:
+    Alice must not access Bob's insurance claim.
+    """
+    response = client.get("/claims/1002?user=Alice")
+
+    assert response.status_code == 403
