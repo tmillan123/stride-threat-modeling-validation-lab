@@ -7,7 +7,8 @@ This project applies the **STRIDE threat modeling framework** to a FastAPI-based
 
 ```mermaid
 flowchart TB
-    APP["🔐 FastAPI Claims API"]
+    APP["🔐 FastAPI
+Claims API"]
 
     subgraph STRIDE["STRIDE Threat Categories"]
         direction TB
