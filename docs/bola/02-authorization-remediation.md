@@ -124,15 +124,15 @@ Access is denied unless explicitly authorized.
 
 ## 10. Remediation Acceptance Criteria
 
-- [ ] Valid JWT required for protected Claims endpoints.
+- [X] Valid JWT required for protected Claims endpoints.
 - [ ] User-supplied identity is no longer trusted.
-- [ ] Claim ownership is associated with a stable subject identifier.
-- [ ] Alice can access her own claim.
-- [ ] Bob can access his own claim.
-- [ ] Cross-user access is denied.
-- [ ] Unauthenticated requests are rejected.
+- [X] Claim ownership is associated with a stable subject identifier.
+- [X] Alice can access her own claim.
+- [X] Bob can access his own claim.
+- [X] Cross-user access is denied.
+- [X] Unauthenticated requests are rejected.
 - [ ] Automated regression tests pass.
-- [ ] Security validation evidence is documented.
+- [X][ ] Security validation evidence is documented.
 
 ## 11. Residual Risks and Design Considerations
 
@@ -159,7 +159,7 @@ implemented or validated.
 
 ## Related Documentation
 
-- [Security Architecture](../architecture.md)
+- [Security Architecture](docs/architecture.md)
 - [Security Findings](../security-findings.md)
 - [Keycloak Integration](../03-keycloak-integration.md)
 - [JWT Authentication](../04-jwt-authentication.md)

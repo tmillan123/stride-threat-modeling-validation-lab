@@ -26,10 +26,6 @@ The user `bob` successfully authenticated against the
 ![Bob authentication success](../../evidence/bola/keycloak/02-bob-authentication-success.jpg)
 
 
-### Audience Restriction and Token Validation
-
-
-
 ### Audience Validation
 
 #### Objective

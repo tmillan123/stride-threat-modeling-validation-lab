@@ -158,20 +158,18 @@ Last updated: 2026-11-24
 
 ### Architecture and Requirements
 
-- [Security Architecture](architecture.md)
-- [Security Requirements](requirements.md)
-- [Security Findings](security-findings.md)
+- [Security Architecture](/docs/architecture.md)
+- [Security Requirements](/requirements.txt)
+- [Security Findings](/docs/security-findings.md)
 
 ### Implementation
 
-- [Keycloak Integration](03-keycloak-integration.md)
-- [JWT Authentication](04-jwt-authentication.md)
-- [Authorization Remediation](bola/02-authorization-remediation.md)
+- [Keycloak Integration](/docs/03-keycloak-integration.md)
+- [JWT Authentication](/docs/04-jwt-authentication.md)
+- [Authorization Remediation](/docs/bola/02-authorization-remediation.md)
 
 ### Security Validation
 
-- [Baseline Vulnerability Evidence](bola/TC-BOLA-001.md)
-- [Regression Testing](bola/04-regression-testing.md)
 - [Automated Authorization Tests](../tests/test_authorization.py)
 
 ## 13. References

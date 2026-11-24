@@ -85,6 +85,46 @@ Swagger UI provides an interactive interface for executing and inspecting API re
 Press `Ctrl+C` in the terminal running Uvicorn.
 
 ---
+## STRIDE Threat Coverage — BOLA Remediation
+
+The first implementation milestone focuses on
+authentication and object-level authorization,
+addressing selected threats across three STRIDE
+categories.
+
+| STRIDE Category | Identified Threat | Security Control | Status |
+|---|---|---|---|
+| Spoofing | Identity impersonation | Keycloak, OIDC, JWT validation | Implemented — validation ongoing |
+| Tampering | Unauthorized data modification | Input validation and integrity controls | Planned |
+| Repudiation | Untraceable actions | Security audit logging | Planned |
+| Information Disclosure | Unauthorized claims access | Object-level authorization | Validated |
+| Denial of Service | Resource exhaustion | Rate limiting and resource protection | Planned |
+| Elevation of Privilege | Horizontal privilege escalation | Subject-based ownership verification | Validated for tested cross-user scenarios |
+
+### Security Engineering Lifecycle
+
+1. Identify threats using the STRIDE methodology.
+2. Reproduce the BOLA vulnerability.
+3. Define security requirements.
+4. Design appropriate defensive controls.
+5. Implement centralized identity management.
+6. Enforce object-level authorization.
+7. Validate controls through security regression tests.
+8. Document findings and residual risks.
+
+### Current Milestone
+
+- Keycloak identity provider integration.
+- OAuth 2.0 Authorization Code Flow with PKCE.
+- Cryptographic JWT validation.
+- Subject-based object ownership verification.
+- BOLA prevention demonstrated in both directions.
+- Manual security regression testing in progress.
+- Automated authorization regression testing planned.
+
+The current milestone addresses selected threats
+within three of the six STRIDE categories.
+It does not yet represent comprehensive STRIDE coverage.
 
 ## Security Validation Focus
 
@@ -195,8 +235,8 @@ These represent potential extensions of the laboratory. Their inclusion in the t
 
 ## Supporting Documentation
 
-- [Threat Model](docs/threat-model.md)
-- [Security Findings](docs/security-findings.md)
-- [BOLA Authorization Validation Report](reports/bola-authorization-test.md)
-- [Automated Authorization Tests](tests/test_authorization.py)
-- [BOLA Test Evidence](evidence/bola/)
+- [Threat Model](docs/stride-threat-model.md)
+- [Security Findings](/docs/security-findings.md)
+- [BOLA Authorization Validation Report](/reports/bola-authorization-test.md)
+- [Automated Authorization Tests](/tests/test_authorization.py)
+- [BOLA Test Evidence](/evidence/bola/)
